@@ -1,0 +1,425 @@
+{% extends 'base.html' %}
+{% block navbar %}
+              <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+
+		  <li><a href="{% block price %}{% endblock price %}#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+{% endblock %}
+{% load static %}
+  {% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to Py Networking</h1>
+      <h2>"Alone we can do so little, together we can do so much"</h2>
+      <a href="#about" class="btn-get-started scrollto">Let's Start</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+            <img src={% static 'home/assets/img/about-img.jpg'  %} class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
+            <h3 data-aos="fade-up">A simple way to Earn alot</h3>
+            <p data-aos="fade-up">
+                We found that one business model stood out from the rest. This particular business model creates passive
+                income but requires relatively little cash investment to startup. It has very low overhead, and can be
+                operated on a flexible part-time basis until it generates enough cash flow to transition out of his
+                current full-time job. That Business model is called Network Marketing.
+            </p>
+            <div class="icon-box" data-aos="fade-up">
+              <i class="bx bx-receipt"></i>
+              <h4>Team Power</h4>
+                <p>
+                  "It's better to earn <strong>1% of 100 people</strong> than to <strong>earn 100% of your efforts</strong>." So, Build your team on our platform and get 5-40% from thousands of people.</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Become Rich</h4>
+              <p>
+                  "The richest people in the world look for and <strong>build networks,</strong> everyone else looks for <strong>work</strong>."
+                  Stop working, Start earning and become Rich!
+              </p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Right Method</h4>
+              <p>
+                  "If you don't find a way to <strong>make money while you sleep</strong>, you will <strong>work until you die</strong>.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Steps Section ======= -->
+    <section id="steps" class="steps section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in">
+            <span>01</span>
+            <h4>Create an Account</h4>
+            <p>Creating an account is the first step to start. Create an account with your real information to save yourself from the difficulty of verification in future.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
+            <span>02</span>
+            <h4>Watch How to Video</h4>
+            <p>A video shows up on your successful registration. Make sure to watch complete video to understand process correctly.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
+            <span>03</span>
+            <h4> Get a membership </h4>
+            <p>You can earn for free and could earn enough to get a membership but it require time. Our suggestion is you should get a member according to your liking as you start.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="300">
+            <span>04</span>
+            <h4>Build a team</h4>
+            <p>Build a team for yourself by referring others. Your team decide the standard for your earnings. The better the team the easier to get you goals.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="400">
+            <span>05</span>
+            <h4>Enjoy the time</h4>
+            <p>After building a team for yourself it's time to enjoy and relax and you see you balance going higher and higher everyday.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="500">
+            <span>06</span>
+            <h4>Repeat the process</h4>
+            <p>It's not a one time earning it's recurring. Means you earn again and again from the system just by renewing your account. </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Steps Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+                  <h4>Simple to the point Dashboard</h4>
+                  <p>With simple and easy to use and intract dashboard anyone can manage their account and balance.</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">
+                  <h4>Interactive Staff </h4>
+                  <p>We are available for you everywhere you can get help instantly and have your query resolved.</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">
+                  <h4>Get your balance anytime</h4>
+                  <p>You can exchange your balance with money anytime you what. No restrictions!</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">
+                  <h4>Extra Benefits</h4>
+                  <p>We will be selecting some of users some extra benefits. So make sure you have your account information filled and have a strong team. </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-7 ml-auto" data-aos="fade-left">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src={% static 'home/assets/img/features-1.png'  %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src={% static 'home/assets/img/features-2.png'  %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src={% static 'home/assets/img/features-3.png'  %} alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src={% static 'home/assets/img/features-4.png'  %} alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>We ensure the best services are provided to our users. As the main purpose of the company is to make people earn alongside we facilitate our users with the best services. So, they can earn without any difficulty.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Send Balance</a></h4>
+              <p class="description">You can share balance with anyone in the platform anytime you want. You can also exchange balance with cash sending it to new users.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Contact Us</a></h4>
+              <p class="description">We are always here for your service you can use Contact Us from, Facebook, Gmail, Instagram etc for any query.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Simple Dashboard</a></h4>
+              <p class="description">With simple easy to use dashboard anyone can easily understand and use the functionality.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Worldwide Availability</a></h4>
+              <p class="description">You can earn from where ever you are in the whole world. You just need a mindset to do it.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>F.A.Q</h2>
+          <p>Following are some common questions. For any other question you can contact us anytime and we are here for your assistance.  </p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">How we earn from this system? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                <p>
+                 There are many ways you can earn with us. One of the top is network marketing. You refer others and get your commission up to many levels.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">What should I do first? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                <p>
+                  Follow the steps given above after about section. First, create and account watch how to video and then create a team and earn with no limits.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">Can I earn for free? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                <p>
+                  Yes, you can earn for free and can earn enough money to purchase a membership for yourself and the real earning starts afterwards.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">How I withdraw my commission? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                <p>
+                    There are many exchangers available around you. You can exchange your balance with money or you can also send to new users and get money from them. Sending balance is free for everyone.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">Can I have multiple accounts? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+                <p>
+                    Yes, you can have multiples accounts with same CNIC number. People having larger team get more benefits .So, for this We use your CNIC number as reference to connect all your accounts for calculating points.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Pricing</h2>
+          <p>Following are available memberships you can get to be a part of our team. Hurry up! Come earn with us get a membership that suits you!</p>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">Free</h3>
+              <h5><sup>py</sup>0<span> / 6 months</span></h5>
+                <div class="small">
+
+                <p>Only 1 level commission</p>
+                <p>5% direct commission</p>
+                <p>0% Indirect commission</p>
+                <p class="na">7 Referrals at Max</p>
+                </div>
+              <div class="btn-wrap">
+                <a href="{% url 'membership' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">Basic</h3>
+              <h5><sup>py</sup>5<span> / 6 months</span></h5>
+                <div class="small">
+
+                <p>3 level commission</p>
+                <p>25% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">10 Referrals at Max</p>
+                </div>
+              <div class="btn-wrap">
+                <a href="{% url 'membership' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">Premium</h3>
+              <h5><sup>py</sup>50<span> / 8 months</span></h5>
+                <div class="small">
+                 <p>4 level commission</p>
+                <p>30% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">15 Referrals at Max</p>
+                </div>
+              <div class="btn-wrap">
+                <a href="{% url 'membership' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">Ultimate</h3>
+              <h5><sup>py</sup>100<span> / 12 months</span></h5>
+                <div class="small">
+                <p>5 level commission</p>
+                <p>35% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">25 Referrals at Max</p>
+                </div>
+              <div class="btn-wrap">
+                <a href="{% url 'membership' %}" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="mb-0">Contact</h2>
+            <div class="text-center mb-3"><a href="{% url 'contact_us' %}">Send Message</a></div>
+
+          <p>We are available for your assistance. You can contact us if you face any difficulty during the whole process. You can also provide feedback regarding our services. Love to hear from you!</p>
+        </div>
+
+        <div class="row no-gutters justify-content-center" data-aos="fade-up">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>Lahore, Punjab, Pakistan</p>
+              </div>
+
+              <div class="email mt-4">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>info.pynetworking@gmail.com</p>
+              </div>
+
+              <div class="phone mt-4">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p></p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435521.4079239993!2d74.0542001338166!3d31.48263523074283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab!5e0!3m2!1sen!2s!4v1588752498513!5m2!1sen!2s" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

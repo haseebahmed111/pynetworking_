@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% block content %}
+        <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Promotional Offers</h2>
+          <p>Complete the requirements to get the mentioned prizes.</p>
+        </div>
+          {% if error %}
+<div class="alert alert-danger" role="alert">
+    {{ message}}
+</div>
+          {% endif %}
+         {% if is_successful %}
+<div class="alert alert-success" role="alert">
+    {{ message}}
+</div>
+          {% endif %}
+        <div class="row">
+
+          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">Statup Reward</h3>
+              <h5>Premium Membership</h5>
+              <h5>5 py bonus</h5>
+                <div class="small">
+
+                <p>Complete one of the following requirement within 30 days of account creation to get rewards:</p>
+                <p>a. 10 Referral with Basic Membership</p>
+                <p>b. 3 Referral with Premium Membership</p>
+                <p>c. 1 Referral with Ultimate Membership</p>
+                </div>
+              <div class="btn-wrap" data-toggle="modal" data-target="#basicModal">
+                  <a href="{% url 'claim_reward' startup_reward.pk %}" class="btn-buy">Claim Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+{% endblock %}

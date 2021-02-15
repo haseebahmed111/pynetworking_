@@ -1,0 +1,144 @@
+{% extends 'base.html'%}
+{% block content %}
+        <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Membership</h2>
+          <p>Choose one Membership that suits you. The greater membership the choose more benefits you get.</p>
+        </div>
+          {% if no_balance %}
+<div class="alert alert-danger" role="alert">
+  You dont have enough balance in your account
+</div>
+          {% endif %}
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">{{ basic.title }}</h3>
+              <h5><sup>py</sup>{{ basic.price }}<span> / {{ basic.months }} months</span></h5>
+                <div class="small">
+
+                <p>{{ basic.max_levels }} level commission</p>
+                <p>{{ basic.commission_percentage }}% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">{{ basic.max_referrals }} Referrals at Max</p>
+                </div>
+              <div class="btn-wrap" data-toggle="modal" data-target="#basicModal">
+                  <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">{{ premium.title }}</h3>
+              <h5><sup>py</sup>{{ premium.price }}<span> / {{ premium.months }} months</span></h5>
+                <div class="small">
+                 <p>{{ premium.max_levels }} level commission</p>
+                <p>{{ premium.commission_percentage }}% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">{{ premium.max_referrals }} Referrals at Max</p>
+                </div>
+              <div class="btn-wrap"data-toggle="modal" data-target="#premiumModal">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box icon-box-pink"style="width: 100%">
+              <h3 class="title">{{ ultimate.title }}</h3>
+              <h5><sup>py</sup>{{ ultimate.price }}<span> / {{ ultimate.months }} months</span></h5>
+                <div class="small">
+                <p>{{ ultimate.max_levels }} level commission</p>
+                <p>{{ ultimate.commission_percentage }}% direct commission</p>
+                <p>5% Indirect commission</p>
+                <p class="na">{{ ultimate.max_referrals }} Referrals at Max</p>
+                </div>
+              <div class="btn-wrap"data-toggle="modal" data-target="#ultimateModal">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm Purchase</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>Are you sure?</p>
+          <p>You want to purchase Basic Membership.</p>
+          <p>Current membership will be changed with Basic.</p>
+          <p class="small">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <a href="{% url 'buy_membership' basic.pk %}"><button type="button" class="btn btn-success">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     <div class="modal-body">
+          <p>Are you sure?</p>
+          <p>You want to purchase Premium Membership.</p>
+          <p>Current membership will be changed with Premium.</p>
+          <p class="small">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <a href="{% url 'buy_membership' premium.pk %}"><button type="button" class="btn btn-success">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="modal fade" id="ultimateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>Are you sure?</p>
+          <p>You want to purchase The greatest Ultimate Membership.</p>
+          <p>Current membership will be exchanged with Ultimate.</p>
+          <p class="small">This action cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <a href="{% url 'buy_membership' ultimate.pk %}"><button type="button" class="btn btn-success">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

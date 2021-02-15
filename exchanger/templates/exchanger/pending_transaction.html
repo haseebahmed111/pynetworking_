@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Transaction History - {% endblock title %}
+
+{% load static %}
+ {% load widget_tweaks %}
+{% block content %}
+  <div class="container" style="padding-top: 2%">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-5 col-lg-6 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg">
+                <div class="p-3">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Pending List!</h1>
+                  </div>
+                    <table class="table table-striped small">
+                      <thead>
+                        <tr>
+                          <th scope="col">Username</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Dated</th>
+                          <th scope="col">Approve</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for s in send%}
+                        <tr>
+                          <th scope="row">{{ s.send_to.username }}</th>
+                          <td>{{ s.amount }}</td>
+                          <td>{{ s.date }}</td>
+                            <td><a href="{% url 'send_pending_balance' s.pk %}">send</a></td>
+
+                        </tr>
+                          {% empty %}
+                           <tr>
+                              <th><div class="text-sm-center">You dont  </div></th>
+                              <th><div class="text-sm-center">have any </div></th>
+                               <th><div class="text-sm-center"> Pending </div></th>
+                              <th><div class="text-sm-center"> balance!</div></th>
+
+                          </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+{% endblock content %}

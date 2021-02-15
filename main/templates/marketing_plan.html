@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% block title %}Marketing Plan - {% endblock title %}
+
+{% load static %}
+ {% load widget_tweaks %}
+{% block content %}
+  <div class="container" style="padding-top: 2%">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+
+            <!-- Nested Row within Card Body -->
+              <div class="row">
+                  <div class="col-lg">
+                  <div class="text-center">
+                      <h1 class="h4 text-gray-900 pt-3"> Marketing Plan</h1>
+                      <p class="small">Note: Commission varies from estimated amount and it depend on your and your team's working.</p>
+
+                </div>
+                  </div>
+              </div>
+            <div class="row">
+
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-left">
+                    <h1 class="h4 text-gray-900 mb-4">Free Membership </h1>
+                       <table class="table table-striped small">
+                      <thead>
+                        <tr>
+                          <th scope="col">Total Earning</th>
+                          <th scope="col">Basic</th>
+                          <th scope="col">Premium</th>
+                          <th scope="col">Ultimate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <th scope="row">Level 1</th>
+                          <td>1.75</td>
+                          <td>17.50</td>
+                          <td>35.0</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                      <p>Max allowed referrals are 7 and direct commission is 5% and no indirect commission. </p>
+                      <p>So, with Free membership you earn 5% of every person join using your link or use your username. </p>
+                      <p>Commission on max Referrals of different memberships </p>
+                      <div><strong>Basic:</strong> </div>
+                      <div class="small">&nbsp;&nbsp;&nbsp;&nbsp;7 x 0.25 (5% of Basic Membership) = 1.75 py </div>
+                      <p><strong>Premium:</strong> 7 x 2.5 (5% of Premium Membership) = 17.5 py </p>
+                      <p><strong>Ultimate:</strong> 7 x 5 (5% of Ultimate Membership) = 35 py </p>
+                      <p>Your commission on free membership lies between <strong>0-35 py</strong> </p>
+
+
+                  </div>
+              </div>
+            </div>
+             <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-left">
+                    <h1 class="h4 text-gray-900 mb-4">Baic Membership </h1>
+                      <table class="table table-striped small">
+                      <thead>
+                        <tr>
+                          <th scope="col">Comission per Referral</th>
+                          <th scope="col">Basic</th>
+                          <th scope="col">Premium</th>
+                          <th scope="col">Ultimate</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr>
+                          <th scope="row">Level 1 - 25%</th>
+                          <td>1.25 py</td>
+                          <td>12.5 py</td>
+                          <td>25.0 py</td>
+                        </tr>
+                      <tr>
+                          <th scope="row">Level 2 - 5%</th>
+                          <td>0.25 py</td>
+                          <td>2.5 py</td>
+                          <td>5.0 py</td>
+                        </tr>
+                      <tr>
+                          <th scope="row">Level 3 - 5%</th>
+                          <td>0.25 py</td>
+                          <td>2.5 py</td>
+                          <td>5.0 py</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Total Tree Commission</th>
+                          <td >287.5 py</td>
+                          <td >2875.0 py</td>
+                          <td >5750.0 py</td>
+                        </tr>
+
+
+                      </tbody>
+                      </table>
+                      <div class="text"><strong>Explanation:</strong> </div>
+
+                      <p>Max allowed referrals are 10 and direct commission is 25% and 5% indirect commission upto 2 level. </p>
+                      <p>So, with Basic membership you earn 25% of every person join using your link or use your username and
+                          5% if any person join under your referral. </p>
+                      <p>Commission on max Referrals of different memberships </p>
+                      <div class="text"><strong>Basic:</strong> </div>
+                      <div class="text-sm-left small">&nbsp;&nbsp;&nbsp;&nbsp;Level 1  10 x 1.25 (25% of Basic Membership) = 12.50 py </div>
+                      <div class="text-sm-left small">&nbsp;&nbsp;&nbsp;&nbsp;Level 2  10x10 x 0.25 (5% of Basic Membership) = 25.0 py </div>
+                      <div class="text-sm-left small">&nbsp;&nbsp;&nbsp;&nbsp;Level 3  10x10x10 x 0.25 (5% of Basic Membership) = 250.0 py </div>
+                      <div class="text-sm-left small">&nbsp;&nbsp;&nbsp;&nbsp;Total: 12.50+25.0+250.0 = 287.5 </div>
+
+                      <p><strong>Premium:</strong> 7 x 2.5 (5% of Premium Membership) = 17.5 py </p>
+                      <p><strong>Ultimate:</strong> 7 x 5 (5% of Ultimate Membership) = 35 py </p>
+                      <p>Your commission on free membership lies between <strong>0-35 py</strong> </p>
+
+
+                  </div>
+              </div>
+            </div>
+                <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-left">
+                    <h1 class="h4 text-gray-900 mb-4">Free Membership </h1>
+                      <p>Max allowed referrals are 7 and direct commission is 5% and no indirect commission. </p>
+                      <p>So, with Free membership you earn 5% of every person join using your link or use your username. </p>
+                      <p>Earning on max Referrals of different memberships </p>
+                      <p><strong>Basic:</strong> 7 x 0.25 (5% of Basic Membership) = 1.75 py </p>
+                      <p><strong>Premium:</strong> 7 x 2.5 (5% of Premium Membership) = 17.5 py </p>
+                      <p><strong>Ultimate:</strong> 7 x 5 (5% of Ultimate Membership) = 35 py </p>
+                      <p>Your commission on free membership lies between <strong>0-35 py</strong> </p>
+
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+
+{% endblock content %}

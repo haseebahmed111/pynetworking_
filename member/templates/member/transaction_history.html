@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %}Transaction History - {% endblock title %}
+
+{% load static %}
+ {% load widget_tweaks %}
+{% block content %}
+  <div class="container" style="padding-top: 2%">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="p-3">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Sent History!</h1>
+                  </div>
+                    <table class="table table-striped small">
+                      <thead>
+                        <tr>
+                          <th scope="col">Username</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Dated</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for s in sent%}
+                        <tr>
+                          <th scope="row">{{ s.send_to.username }}</th>
+                          <td>{{ s.amount }}</td>
+                          <td>{{ s.date }}</td>
+                        </tr>
+                          {% empty %}
+                           <tr>
+                              <th><div class="text-sm-center">Have not sent </div></th>
+                              <th><div class="text-sm-center"> any </div></th>
+                              <th><div class="text-sm-center"> balance!</div></th>
+
+                          </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+              </div>
+            </div>
+               <div class="col-lg-6">
+                <div class="p-3">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Received History!</h1>
+                  </div>
+                  <table class="table table-striped small">
+                      <thead>
+                        <tr>
+                          <th scope="col">Username</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Dated</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for r in received%}
+                        <tr>
+                          <th scope="row">{{ r.user.username }}</th>
+                          <td>{{ r.amount }}</td>
+                          <td>{{ r.date }}</td>
+                        </tr>
+                          {% empty %}
+                          <tr>
+                              <th><div class="text-sm-center">Have not received </div></th>
+                              <th><div class="text-sm-center"> any </div></th>
+                              <th><div class="text-sm-center"> balance!</div></th>
+
+                          </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>Loading
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock %} Py Networking</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="{% url 'favicon'%}"/>
+<link rel="shortcut icon" type="image/x-icon" href="{% url 'favicon'%}"/>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'home/assets/vendor/bootstrap/css/bootstrap.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'home/assets/vendor/icofont/icofont.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'home/assets/vendor/boxicons/css/boxicons.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'home/assets/vendor/owl.carousel/assets/owl.carousel.min.css'  %}" rel="stylesheet">
+  <link href="{% static 'home/assets/vendor/venobox/venobox.css'  %}" rel="stylesheet">
+  <link href="{% static 'home/assets/vendor/aos/aos.css'  %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'home/assets/css/style.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Maxim - v2.1.0
+  * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+       <h1 class="text-light"><a href={% url 'home' %}>Py Networking</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+       <!-- <a href="index.html"><img src="" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+
+            {% block navbar %}
+            {% endblock %}
+
+           {% if request.user.is_authenticated %}
+            <li class="drop-down"><a href="">{{ request.user.username}}</a>
+
+
+            <ul>
+              <li><a href="{% url 'home' %}">Home</a></li>
+                {% if request.user.is_superuser %}
+              <li><a href="{% url 'admin:index' %}">Admin Panel</a></li>
+                {% endif %}
+              <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+
+                  <li><a href="{% url 'referrals_info' %}">Manage Referrals</a></li>
+                  <li><a href="{% url 'send_balance' %}">Send Balance</a></li>
+
+
+              </li>
+              <li><a href="{% url 'membership' %}">Get Membership</a></li>
+              <li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
+              <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+          </li>
+               {% else%}
+               <li><a href={% url 'login' %}>Login/SignUp</a></li>
+            {% endif %}
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  {% block content %}
+  {% endblock %}
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Py Networking</h3>
+              <p>
+                Lahore <br>
+                Punjab, Pakistan<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info.pynetworking@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.facebook.com/pynetworking" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/pynetworking/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC60tYPSpQHFFvM3r72Sv3ZQ" class="google-plus"><i class="bx bxl-youtube"></i></a>
+                <a href="https://twitter.com/PyNetworking" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/py-networking-3548661a8/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Network Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Social Media Marketing</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>This service will be available soon!</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Py Networking 2020</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'home/assets/vendor/jquery/jquery.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/jquery.easing/jquery.easing.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/php-email-form/validate.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/owl.carousel/owl.carousel.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/isotope-layout/isotope.pkgd.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/venobox/venobox.min.js'  %}"></script>
+  <script src="{% static 'home/assets/vendor/aos/aos.js'  %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'home/assets/js/main.js'  %}"></script>
+
+</body>
+
+</html>
